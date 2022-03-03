@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("../fonts/BrandonGrotesque-Black.woff2") format("woff2"),
+    url("../fonts/BrandonGrotesque-Black.woff") format("woff"),
+    url("../fonts/BrandonGrotesque-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Tisa Sans Pro";
+  src: url("../fonts/TisaSansPro-Regular.woff2") format("woff2"),
+    url("../fonts/TisaSansPro-Regular.woff") format("woff"),
+    url("../fonts/TisaSansPro-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gothic A1";
+  src: url("../fonts/GothicA1-Light.woff2") format("woff2"),
+    url("../fonts/GothicA1-Light.woff") format("woff"),
+    url("../fonts/GothicA1-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}

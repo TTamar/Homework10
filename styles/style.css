@@ -17,13 +17,9 @@ main {
   width: 100%;
 }
 .description {
-  height: 385px;
-}
-.description {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* align-items: flex-start; */
   height: 385px;
 }
 h2 {
@@ -34,16 +30,17 @@ h2 {
 }
 .description p {
   font-family: "Tisa Sans Pro";
-  width: 642px;
-  height: 96px;
+  max-width: 642px;
+  width: 100%;
   font-size: 32.7px;
   line-height: 48.6px;
 }
 .description span {
   font-family: "Tisa Sans Pro";
   color: #959595;
-  width: 831.5px;
-  height: 126.25px;
+  max-width: 831.5px;
+  width: 100%;
+  /* height: 126.25px; */
   font-size: 25px;
   line-height: 44px;
 }
@@ -76,7 +73,6 @@ h3 {
   line-height: 33.3px;
   letter-spacing: 1.4px;
   padding: 0 13px;
-
 }
 .blue span {
   background-color: #0865de;
@@ -92,72 +88,144 @@ h3 {
   color: #000000;
   box-shadow: 0px 2px 4px #00000021;
 }
-.gridprojects{
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(4,440px);
-    grid-gap: 30px;
-    margin-top: 60px;
+.gridprojects {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, 440px);
+  grid-gap: 30px;
+  margin-top: 60px;
 }
-img{
-    width: 760px;
-    height: 440px;
+img {
+  width: 760px;
+  height: 440px;
 }
-.grid{
-    display: grid;
-    grid-template-columns: 65% 35%;
-    background-color: #FFFFFF;
-    border-radius: 0px 0px 6px 6px;
-    box-shadow: 0px 4px 6px #00000029;
+.grid {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  background-color: #ffffff;
+  border-radius: 0px 0px 6px 6px;
+  box-shadow: 0px 4px 6px #00000029;
 }
-.text{
-    padding: 39px 60px;
-    /* display: flex;
+.text {
+  padding: 39px 60px;
+  /* display: flex;
     flex-wrap: wrap; */
 }
-h4{
-    font-family: "Brandon Grotesque";
-    font-size: 14px;
-    line-height: 33.3px;
-    letter-spacing: 1.4px;
-    margin-bottom: 16px;
+h4 {
+  font-family: "Brandon Grotesque";
+  font-size: 14px;
+  line-height: 33.3px;
+  letter-spacing: 1.4px;
+  margin-bottom: 16px;
 }
-.text span{
-    font-family: "Tisa Sans Pro";
-    font-size: 15px;
-    line-height: 33.3px;
-    margin-bottom: 9px;
+.text span {
+  font-family: "Tisa Sans Pro";
+  font-size: 15px;
+  line-height: 33.3px;
+  margin-bottom: 9px;
 }
-.greytext{
-    font-family: "Brandon Grotesque";
-    font-size: 12px;
-    line-height: 33.3px;
-    letter-spacing: 1.2px;
-    color: #959595;
-    display: block;
-    margin-bottom: 31px;
+.greytext {
+  font-family: "Brandon Grotesque";
+  font-size: 12px;
+  line-height: 33.3px;
+  letter-spacing: 1.2px;
+  color: #959595;
+  display: block;
+  margin-bottom: 31px;
 }
-.text p{
-    font-family: "Tisa Sans Pro";
-    font-size: 15px;
-    line-height: 28px;
+.text p {
+  font-family: "Tisa Sans Pro";
+  font-size: 15px;
+  line-height: 28px;
 }
-.button{
-    display: flex;
+.button {
+  display: flex;
+  align-items: center;
+  margin-top: 48px;
+}
+button {
+  width: 22px;
+  height: 22px;
+  border-radius: 11px;
+  background-color: #0865de;
+  color: #ffffff;
+  border: none;
+  margin-right: 12px;
+}
+.button p {
+  font-size: 12px;
+  line-height: 33.3px;
+  letter-spacing: 1.2px;
+}
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 100%;
+    background-color: #f7f7f7;
+    box-shadow: none;
+  }
+  .gridprojects {
+    grid-gap: 490px;
+  }
+  img {
+    width: 950px;
+    height: auto;
+  }
+  .flexbox {
+    flex-direction: column;
     align-items: center;
-    margin-top: 48px;
+  }
+  .box {
+    margin-top: 30px;
+  }
+  .text {
+    max-width: 945px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px #00000029;
+  }
 }
-button{
-    width: 22px;
-    height: 22px;
-    border-radius: 11px;
-    background-color: #0865DE;
-    color: #ffffff;
-    border: none;
-    margin-right: 12px;
+@media (max-width: 820px) {
+  /* .container {
+    margin: 0 5px;
+  } */
+  img {
+    width: 680px;
+  }
+  .text {
+    width: 680px;
+  }
+  .description span {
+    width: 642px;
+  }
 }
-.button p{
-    font-size: 12px;
-    line-height: 33.3px;
-    letter-spacing: 1.2px;
+@media (max-width: 375px) {
+  #pictureinfo {
+    display: none;
+  }
+  img {
+    width: 430px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .description p {
+    font-size: 25px;
+    margin: 30px 0;
+  }
+  .description span {
+    width: 450px;
+  }
+  .box {
+    width: 450px;
+  }
+  .flexbox {
+    margin-top: 100px;
+  }
+  .gridprojects {
+    grid-gap: 150px;
+  }
+  .text {
+    width: 430px;
+  }
 }
